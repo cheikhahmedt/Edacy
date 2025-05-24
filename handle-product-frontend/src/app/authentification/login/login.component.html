@@ -1,0 +1,38 @@
+<div class="bg-indigo-500 m-0 w-full min-h-[100vh] flex justify-center items-center">
+    <div class="flex bg-white flex-col justify-center px-6 py-8 lg:px-8 shadow-2xl border-radius w-[450px] rounded-md">
+        <div class="flex justify-center">
+            <img
+                class="h-10 w-10"
+                src="edacy.png"
+                alt="Your Company"
+            />
+        </div>
+        <h2 class="mt-4 text-center font-bold text-xl">Connexion</h2>
+        <div class="mt-4 w-full">
+            <form class="space-y-4" (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+                <div class="flex flex-col space-y-2 items-center">
+                    <label>Email</label>
+                    <input type="text" class="placeholder:text-gray-200 placeholder:text-sm w-full px-2 py-3 border border-blue-500 rounded-md text-sm text-gray-100 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Email" formControlName="username"/>
+                </div>
+                <div class="flex flex-col space-y-2 items-center">
+                    <label>Mot de passe</label>
+                    <input type="password" class="placeholder:text-gray-200 placeholder:text-sm w-full px-2 py-3 border border-blue-500 rounded-md text-sm text-gray-100 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Mot de passe" formControlName="password"/>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <div class="flex items-center">
+                        <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-2 rounded"/>
+                        <label class="text-blue-500 ml-2 text-sm">Se souvenir de moi</label>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-blue-500 ml-2 text-sm" (click)="forgotPassword()">Mot de passe oublié</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center flex-row mt-2 gap-x-2">
+                    <button [routerLink]="['../register']" class="w-1/2 px-2 py-3 bg-blue-200 p-2 border border-gray-200 rounded-md hover:bg-blue-800 hover:text-white">Créer un compte</button>
+                    <button type="submit" class="w-1/2 px-2 py-3 bg-blue-500 p-2 border border-gray-200 rounded-md hover:bg-blue-800 hover:text-white">Connexion</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,24 @@
+
+<header class="h-10 w-full bg-blue-500 p-2 text-center text-white relative overflow-hidden">
+  <div class="transition-all duration-500">
+    <p *ngIf="showFirst">❤️ LIVRAISON 24H GARANTIE POUR LA FÊTE DES MÈRES ❤️</p>
+    <p *ngIf="!showFirst">JUSQU'À 14H ⚡️ -20% sur le 2ème (code FUN20), -60% sur le 3ème (code FUN60) ⚡️</p>
+  </div>
+</header>
+<div class="mt-2 p-2">
+    <div class="flex flex-row items-center mx-4 p-2">
+        <input type="search" class="p-2 border-blue-500 border-2 rounded-md w-1/2" placeholder="Rechercher" />
+        <button class="bg-blue-800 text-white p-2 rounded-md ml-2">Rechercher</button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- @for (item of items; track $index) {} -->
+        <div class="flex flex-col items-center border border-gray-200 rounded-lg shadow-md">
+            <app-product-card [product]="product"></app-product-card>
+            <div class="flex flex-row justify-between items-center p-2 w-full">
+                <button class="bg-blue-800 py-2 px-4 text-white rounded-md">Modifier</button>
+                <button class="bg-red-700 py-2 px-4 text-white rounded-md">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
